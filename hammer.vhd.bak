@@ -1,0 +1,71 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity counter is
+port(
+	clock_in : in std_logic;
+	enable_in : in std_logic;
+	reset_in : in std_logic;
+	
+	led_9 : out std_logic;
+	led_8 : out std_logic;
+	led_7 : out std_logic;
+	led_6 : out std_logic;
+	led_5 : out std_logic;
+	led_4 : out std_logic;
+	led_3 : out std_logic;
+	led_2 : out std_logic;
+	led_1 : out std_logic;
+	led_0 : out std_logic;
+	
+	whack : out std_logic;
+	super_whack : out std_logic;
+);
+end counter;
+
+architecture rtl of counter is
+signal clock : std_logic;
+signal enable : std_logic;
+signal reset : std_logic;
+
+begin
+clock <= clock_in;
+enable <= enable_in;
+reset <= reset_in;
+
+process(clock, enable)
+variable temp : std_logic_vector (3 downto 0) := "0000";
+BEGIN
+
+if (rising_edge(clock)) then
+	if enable = '1' then
+		--if temp = "100" then
+      --temp <= "000";
+      --else
+      temp := temp + '1';
+		--end if;
+	elsif reset = '1' and temp /= "101" then
+		temp := "000";
+	end if;
+end if;
+
+case temp is
+when "000" => count_out <= '0';  -- '0'
+when "001" => count_out <= '0';  -- '1'
+when "010" => count_out <= '0';  -- '2'
+when "011" => count_out <= '0';  -- '3'
+when "100" => count_out <= '0';  -- '4'
+when "101" => count_out <= '1';  -- '5'
+when "110" => count_out <= '0';  -- '6'
+when "111" => count_out <= '0';  -- '7'
+end case;
+--if temp = "011" then
+	--count_out <= '1';
+--else
+	--count_out <= '0';
+--end if;
+
+end process;
+end rtl;

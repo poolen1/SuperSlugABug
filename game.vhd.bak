@@ -1,0 +1,181 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity bloc_and_open_display is
+port(
+	open_in : in std_logic;
+	bloc_in : in std_logic;
+	
+	seg5_0 : out std_logic;
+	seg5_1 : out std_logic;
+	seg5_2 : out std_logic;
+	seg5_3 : out std_logic;
+	seg5_4 : out std_logic;
+	seg5_5 : out std_logic;
+	seg5_6 : out std_logic;
+	
+	seg4_0 : out std_logic;
+	seg4_1 : out std_logic;
+	seg4_2 : out std_logic;
+	seg4_3 : out std_logic;
+	seg4_4 : out std_logic;
+	seg4_5 : out std_logic;
+	seg4_6 : out std_logic;
+	
+	
+	seg3_0 : out std_logic;
+	seg3_1 : out std_logic;
+	seg3_2 : out std_logic;
+	seg3_3 : out std_logic;
+	seg3_4 : out std_logic;
+	seg3_5 : out std_logic;
+	seg3_6 : out std_logic;
+	
+	seg2_0 : out std_logic;
+	seg2_1 : out std_logic;
+	seg2_2 : out std_logic;
+	seg2_3 : out std_logic;
+	seg2_4 : out std_logic;
+	seg2_5 : out std_logic;
+	seg2_6 : out std_logic;
+	
+	seg1_0 : out std_logic;
+	seg1_1 : out std_logic;
+	seg1_2 : out std_logic;
+	seg1_3 : out std_logic;
+	seg1_4 : out std_logic;
+	seg1_5 : out std_logic;
+	seg1_6 : out std_logic;
+	
+	seg0_0 : out std_logic;
+	seg0_1 : out std_logic;
+	seg0_2 : out std_logic;
+	seg0_3 : out std_logic;
+	seg0_4 : out std_logic;
+	seg0_5 : out std_logic;
+	seg0_6 : out std_logic
+);
+end bloc_and_open_display;
+
+architecture rtl of bloc_and_open_display is
+signal open_input : std_logic;
+signal bloc_input : std_logic;
+--signal seg7_O : std_logic_vector(6 downto 0);
+--signal seg7_P : std_logic_vector(6 downto 0);
+--signal seg7_E : std_logic_vector(6 downto 0);
+--signal seg7_n : std_logic_vector(6 downto 0);
+begin
+open_input <= open_in;
+bloc_input <= bloc_in;
+
+process(open_input, bloc_input)
+BEGIN
+
+--if password is correct, 'open'
+if open_input = '1' and bloc_input = '0' then
+	--7seg 'O'
+	segO_0 <= '0';
+	segO_1 <= '0';
+	segO_2 <= '0'; 
+	segO_3 <= '0'; 
+	segO_4 <= '0'; 
+	segO_5 <= '0'; 
+	segO_6 <= '1';
+	--7seg 'P'
+	segP_0 <= '0';
+	segP_1 <= '0';
+	segP_2 <= '1'; 
+	segP_3 <= '1'; 
+	segP_4 <= '0'; 
+	segP_5 <= '0'; 
+	segP_6 <= '0';
+	--7seg 'E'
+	segE_0 <= '0';
+	segE_1 <= '1';
+	segE_2 <= '1'; 
+	segE_3 <= '0'; 
+	segE_4 <= '0'; 
+	segE_5 <= '0'; 
+	segE_6 <= '0';
+	--7seg 'n'
+	segN_0 <= '1';
+	segN_1 <= '1';
+	segN_2 <= '0'; 
+	segN_3 <= '1'; 
+	segN_4 <= '0'; 
+	segN_5 <= '1'; 
+	segN_6 <= '0';
+	
+--if incorrect attempts > allowed, 7seg 'bloc'
+elsif bloc_input = '1' and open_input = '0' then
+	--7seg 'b'
+	segO_0 <= '1';
+	segO_1 <= '1';
+	segO_2 <= '0'; 
+	segO_3 <= '0'; 
+	segO_4 <= '0'; 
+	segO_5 <= '0'; 
+	segO_6 <= '0';
+	--7seg 'L'
+	segP_0 <= '1';
+	segP_1 <= '1';
+	segP_2 <= '1'; 
+	segP_3 <= '0'; 
+	segP_4 <= '0'; 
+	segP_5 <= '0'; 
+	segP_6 <= '1';
+	--7seg 'o'
+	segE_0 <= '1';
+	segE_1 <= '1';
+	segE_2 <= '0'; 
+	segE_3 <= '0'; 
+	segE_4 <= '0'; 
+	segE_5 <= '1'; 
+	segE_6 <= '0';
+	--7seg 'c'
+	segN_0 <= '1';
+	segN_1 <= '1';
+	segN_2 <= '1'; 
+	segN_3 <= '0'; 
+	segN_4 <= '0'; 
+	segN_5 <= '1'; 
+	segN_6 <= '0';
+
+--else 7seg blank, no lights
+else
+	segO_0 <= '1';
+	segO_1 <= '1';
+	segO_2 <= '1'; 
+	segO_3 <= '1'; 
+	segO_4 <= '1'; 
+	segO_5 <= '1'; 
+	segO_6 <= '1';
+
+	segP_0 <= '1';
+	segP_1 <= '1';
+	segP_2 <= '1'; 
+	segP_3 <= '1'; 
+	segP_4 <= '1'; 
+	segP_5 <= '1'; 
+	segP_6 <= '1';
+	
+	segE_0 <= '1';
+	segE_1 <= '1';
+	segE_2 <= '1'; 
+	segE_3 <= '1'; 
+	segE_4 <= '1'; 
+	segE_5 <= '1'; 
+	segE_6 <= '1';
+	
+	segN_0 <= '1';
+	segN_1 <= '1';
+	segN_2 <= '1'; 
+	segN_3 <= '1'; 
+	segN_4 <= '1'; 
+	segN_5 <= '1'; 
+	segN_6 <= '1';
+end if;
+
+end process;
+end rtl;

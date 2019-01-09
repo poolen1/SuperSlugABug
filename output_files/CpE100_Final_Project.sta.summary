@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'twentyHertz:inst3|clk_20hz'
+Slack : -21.671
+TNS   : -5431.765
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -2.914
+TNS   : -146.724
+
+Type  : Slow 1100mV 85C Model Setup 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : -1.402
+TNS   : -26.356
+
+Type  : Slow 1100mV 85C Model Hold 'twentyHertz:inst3|clk_20hz'
+Slack : -2.059
+TNS   : -8.521
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : -1.882
+TNS   : -3.688
+
+Type  : Slow 1100mV 85C Model Hold 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.586
+TNS   : -41.417
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'twentyHertz:inst3|clk_20hz'
+Slack : -0.538
+TNS   : -276.281
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : -0.538
+TNS   : -29.677
+
+Type  : Slow 1100mV 0C Model Setup 'twentyHertz:inst3|clk_20hz'
+Slack : -22.128
+TNS   : -5551.081
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -3.035
+TNS   : -148.194
+
+Type  : Slow 1100mV 0C Model Setup 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : -1.442
+TNS   : -26.975
+
+Type  : Slow 1100mV 0C Model Hold 'twentyHertz:inst3|clk_20hz'
+Slack : -2.138
+TNS   : -9.257
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : -1.851
+TNS   : -3.544
+
+Type  : Slow 1100mV 0C Model Hold 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.629
+TNS   : -42.779
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'twentyHertz:inst3|clk_20hz'
+Slack : -0.538
+TNS   : -272.165
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : -0.538
+TNS   : -29.511
+
+Type  : Fast 1100mV 85C Model Setup 'twentyHertz:inst3|clk_20hz'
+Slack : -11.209
+TNS   : -2846.757
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -1.272
+TNS   : -49.485
+
+Type  : Fast 1100mV 85C Model Setup 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : -0.572
+TNS   : -4.004
+
+Type  : Fast 1100mV 85C Model Hold 'twentyHertz:inst3|clk_20hz'
+Slack : -1.144
+TNS   : -6.187
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : -0.989
+TNS   : -1.838
+
+Type  : Fast 1100mV 85C Model Hold 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : 0.136
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.528
+TNS   : -5.985
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : -0.022
+TNS   : -0.165
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'twentyHertz:inst3|clk_20hz'
+Slack : 0.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'twentyHertz:inst3|clk_20hz'
+Slack : -10.398
+TNS   : -2644.678
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -1.266
+TNS   : -43.148
+
+Type  : Fast 1100mV 0C Model Setup 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : -0.507
+TNS   : -3.069
+
+Type  : Fast 1100mV 0C Model Hold 'twentyHertz:inst3|clk_20hz'
+Slack : -1.210
+TNS   : -7.357
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -0.967
+TNS   : -1.768
+
+Type  : Fast 1100mV 0C Model Hold 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : 0.119
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.519
+TNS   : -6.044
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'rand_4bit_works:inst|onehertz:inst11|clk_1hz'
+Slack : 0.001
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'twentyHertz:inst3|clk_20hz'
+Slack : 0.135
+TNS   : 0.000
+
+------------------------------------------------------------

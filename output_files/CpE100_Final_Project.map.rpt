@@ -1,0 +1,409 @@
+Analysis & Synthesis report for CpE100_Final_Project
+Mon Apr 23 18:54:43 2018
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Apr 23 18:54:42 2018      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; CpE100_Final_Project                       ;
+; Top-level Entity Name           ; Super_Slug_A_Bug                           ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 429                                        ;
+; Total pins                      ; 58                                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                               ;
++---------------------------------------------------------------------------------+--------------------+----------------------+
+; Option                                                                          ; Setting            ; Default Value        ;
++---------------------------------------------------------------------------------+--------------------+----------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                      ;
+; Top-level entity name                                                           ; Super_Slug_A_Bug   ; CpE100_Final_Project ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX        ;
+; Use smart compilation                                                           ; Off                ; Off                  ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                   ;
+; Enable compact report table                                                     ; Off                ; Off                  ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto                 ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                  ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                  ;
+; Preserve fewer node names                                                       ; On                 ; On                   ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                  ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001         ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993            ;
+; State Machine Processing                                                        ; Auto               ; Auto                 ;
+; Safe State Machine                                                              ; Off                ; Off                  ;
+; Extract Verilog State Machines                                                  ; On                 ; On                   ;
+; Extract VHDL State Machines                                                     ; On                 ; On                   ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                  ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000                 ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                  ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                   ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                   ;
+; Parallel Synthesis                                                              ; On                 ; On                   ;
+; DSP Block Balancing                                                             ; Auto               ; Auto                 ;
+; NOT Gate Push-Back                                                              ; On                 ; On                   ;
+; Power-Up Don't Care                                                             ; On                 ; On                   ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                  ;
+; Remove Duplicate Registers                                                      ; On                 ; On                   ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                  ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                  ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                  ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                  ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                  ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                   ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                  ;
+; Optimization Technique                                                          ; Balanced           ; Balanced             ;
+; Carry Chain Length                                                              ; 70                 ; 70                   ;
+; Auto Carry Chains                                                               ; On                 ; On                   ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                   ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                  ;
+; Auto ROM Replacement                                                            ; On                 ; On                   ;
+; Auto RAM Replacement                                                            ; On                 ; On                   ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                   ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto                 ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto                 ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                   ;
+; Strict RAM Replacement                                                          ; Off                ; Off                  ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                   ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                  ;
+; Auto Resource Sharing                                                           ; Off                ; Off                  ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                  ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                  ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                  ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                   ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                  ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                   ;
+; Report Parameter Settings                                                       ; On                 ; On                   ;
+; Report Source Assignments                                                       ; On                 ; On                   ;
+; Report Connectivity Checks                                                      ; On                 ; On                   ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                  ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                    ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation   ;
+; HDL message level                                                               ; Level2             ; Level2               ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                  ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000                 ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000                 ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                  ;
+; Clock MUX Protection                                                            ; On                 ; On                   ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                  ;
+; Block Design Naming                                                             ; Auto               ; Auto                 ;
+; SDC constraint protection                                                       ; Off                ; Off                  ;
+; Synthesis Effort                                                                ; Auto               ; Auto                 ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                   ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                  ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium               ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto                 ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                   ;
+; Synthesis Seed                                                                  ; 1                  ; 1                    ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                   ;
++---------------------------------------------------------------------------------+--------------------+----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
+; clk_1hz.v                        ; yes             ; User Verilog HDL File              ; C:/altera/13.1/CpE100_Final_Project/clk_1hz.v            ;         ;
+; Super_Slug_A_Bug.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/CpE100_Final_Project/Super_Slug_A_Bug.bdf ;         ;
+; hammer.vhd                       ; yes             ; User VHDL File                     ; C:/altera/13.1/CpE100_Final_Project/hammer.vhd           ;         ;
+; clk_20hz.v                       ; yes             ; User Verilog HDL File              ; C:/altera/13.1/CpE100_Final_Project/clk_20hz.v           ;         ;
+; rand_4_2.vhd                     ; yes             ; User VHDL File                     ; C:/altera/13.1/CpE100_Final_Project/rand_4_2.vhd         ;         ;
+; rand_20_6.vhd                    ; yes             ; User VHDL File                     ; C:/altera/13.1/CpE100_Final_Project/rand_20_6.vhd        ;         ;
+; rand_15_32.vhd                   ; yes             ; User VHDL File                     ; C:/altera/13.1/CpE100_Final_Project/rand_15_32.vhd       ;         ;
+; rand_55_14.vhd                   ; yes             ; User VHDL File                     ; C:/altera/13.1/CpE100_Final_Project/rand_55_14.vhd       ;         ;
+; rand_4bit_works.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/CpE100_Final_Project/rand_4bit_works.bdf  ;         ;
+; game.vhd                         ; yes             ; User VHDL File                     ; C:/altera/13.1/CpE100_Final_Project/game.vhd             ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 1230                   ;
+;                                             ;                        ;
+; Combinational ALUT usage for logic          ; 1901                   ;
+;     -- 7 input functions                    ; 12                     ;
+;     -- 6 input functions                    ; 543                    ;
+;     -- 5 input functions                    ; 335                    ;
+;     -- 4 input functions                    ; 565                    ;
+;     -- <=3 input functions                  ; 446                    ;
+;                                             ;                        ;
+; Dedicated logic registers                   ; 429                    ;
+;                                             ;                        ;
+; I/O pins                                    ; 58                     ;
+; Total DSP Blocks                            ; 0                      ;
+; Maximum fan-out node                        ; game:inst2|process_0~0 ;
+; Maximum fan-out                             ; 457                    ;
+; Total fan-out                               ; 9828                   ;
+; Average fan-out                             ; 4.02                   ;
++---------------------------------------------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                 ;
++------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Library Name ;
++------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------+--------------+
+; |Super_Slug_A_Bug            ; 1901 (0)          ; 429 (0)      ; 0                 ; 0          ; 58   ; 0            ; |Super_Slug_A_Bug                                           ; work         ;
+;    |game:inst2|              ; 1818 (1818)       ; 341 (341)    ; 0                 ; 0          ; 0    ; 0            ; |Super_Slug_A_Bug|game:inst2                                ; work         ;
+;    |hammer:inst1|            ; 17 (17)           ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |Super_Slug_A_Bug|hammer:inst1                              ; work         ;
+;    |rand_4bit_works:inst|    ; 35 (0)            ; 58 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Super_Slug_A_Bug|rand_4bit_works:inst                      ; work         ;
+;       |lfsr_bit_15_32:inst|  ; 1 (1)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Super_Slug_A_Bug|rand_4bit_works:inst|lfsr_bit_15_32:inst  ; work         ;
+;       |lfsr_bit_20_6:inst3|  ; 1 (1)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Super_Slug_A_Bug|rand_4bit_works:inst|lfsr_bit_20_6:inst3  ; work         ;
+;       |lfsr_bit_4_2:inst4|   ; 1 (1)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Super_Slug_A_Bug|rand_4bit_works:inst|lfsr_bit_4_2:inst4   ; work         ;
+;       |lfsr_bit_55_14:inst5| ; 1 (1)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Super_Slug_A_Bug|rand_4bit_works:inst|lfsr_bit_55_14:inst5 ; work         ;
+;       |onehertz:inst11|      ; 31 (31)           ; 26 (26)      ; 0                 ; 0          ; 0    ; 0            ; |Super_Slug_A_Bug|rand_4bit_works:inst|onehertz:inst11      ; work         ;
+;    |twentyHertz:inst3|       ; 31 (31)           ; 26 (26)      ; 0                 ; 0          ; 0    ; 0            ; |Super_Slug_A_Bug|twentyHertz:inst3                         ; work         ;
++------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 429   ;
+; Number of registers using Synchronous Clear  ; 50    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; game:inst2|start                        ; 312     ;
+; game:inst2|temp3[0]                     ; 3       ;
+; game:inst2|temp3[3]                     ; 3       ;
+; game:inst2|temp3[4]                     ; 3       ;
+; game:inst2|temp3[6]                     ; 3       ;
+; game:inst2|temp2[0]                     ; 3       ;
+; game:inst2|temp2[3]                     ; 3       ;
+; game:inst2|temp2[4]                     ; 3       ;
+; game:inst2|temp2[6]                     ; 3       ;
+; game:inst2|temp1[0]                     ; 3       ;
+; game:inst2|temp1[3]                     ; 3       ;
+; game:inst2|temp1[4]                     ; 3       ;
+; game:inst2|temp1[6]                     ; 3       ;
+; game:inst2|temp0[0]                     ; 3       ;
+; game:inst2|temp0[3]                     ; 3       ;
+; game:inst2|temp0[6]                     ; 3       ;
+; game:inst2|temp0[4]                     ; 3       ;
+; Total number of inverted registers = 17 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|trig0      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|timer      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|temp3      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|temp2      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|temp1      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|temp0      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|timer      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|timer      ;
+; 4:1                ; 128 bits  ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|score1     ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|temp0      ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|temp1      ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|temp2      ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|temp3      ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 93 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|score0     ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 93 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|score1     ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 93 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|score2     ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 93 LEs               ; 0 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|score3     ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|Selector6  ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 18 LEs               ; 3 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|Selector5  ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|Selector9  ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 18 LEs               ; 3 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|Selector12 ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|Selector18 ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 18 LEs               ; 3 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|Selector19 ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|Selector31 ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 18 LEs               ; 3 LEs                  ; No         ; |Super_Slug_A_Bug|game:inst2|Selector29 ;
+; 44:1               ; 14 bits   ; 406 LEs       ; 392 LEs              ; 14 LEs                 ; No         ; |Super_Slug_A_Bug|game:inst2|seg4       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:33     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Mon Apr 23 18:54:03 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CpE100_Final_Project -c CpE100_Final_Project
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file randomizer.vhd
+    Info (12022): Found design unit 1: lfsr_bit-rtl
+    Info (12023): Found entity 1: lfsr_bit
+Info (12021): Found 1 design units, including 1 entities, in source file rand_test.bdf
+    Info (12023): Found entity 1: rand_test
+Info (12021): Found 1 design units, including 1 entities, in source file rand_blocks.bdf
+    Info (12023): Found entity 1: rand_blocks
+Info (12021): Found 1 design units, including 1 entities, in source file clk_2hz.v
+    Info (12023): Found entity 1: twohertz
+Info (12021): Found 1 design units, including 1 entities, in source file clk_1hz.v
+    Info (12023): Found entity 1: onehertz
+Info (12021): Found 1 design units, including 1 entities, in source file rand_4bit.bdf
+    Info (12023): Found entity 1: rand_4bit
+Info (12021): Found 1 design units, including 1 entities, in source file counter_clk.bdf
+    Info (12023): Found entity 1: Counter_CLK
+Info (12021): Found 1 design units, including 1 entities, in source file super_slug_a_bug.bdf
+    Info (12023): Found entity 1: Super_Slug_A_Bug
+Info (12021): Found 2 design units, including 1 entities, in source file hammer.vhd
+    Info (12022): Found design unit 1: hammer-rtl
+    Info (12023): Found entity 1: hammer
+Info (12021): Found 1 design units, including 1 entities, in source file whack_test.bdf
+    Info (12023): Found entity 1: whack_test
+Info (12021): Found 1 design units, including 1 entities, in source file clk_8hz.v
+    Info (12023): Found entity 1: eightHertz
+Info (12021): Found 1 design units, including 1 entities, in source file clk_20hz.v
+    Info (12023): Found entity 1: twentyHertz
+Info (12021): Found 1 design units, including 1 entities, in source file clk_10hz.v
+    Info (12023): Found entity 1: tenHertz
+Info (12021): Found 1 design units, including 1 entities, in source file clk_9hz.v
+    Info (12023): Found entity 1: nineHertz
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4to1.bdf
+    Info (12023): Found entity 1: MUX_4to1
+Info (12021): Found 1 design units, including 1 entities, in source file clk_halfhz.v
+    Info (12023): Found entity 1: halfhertz
+Info (12021): Found 1 design units, including 1 entities, in source file clk_3hz.v
+    Info (12023): Found entity 1: threehertz
+Info (12021): Found 1 design units, including 1 entities, in source file clk_qhz.v
+    Info (12023): Found entity 1: qhertz
+Info (12021): Found 1 design units, including 1 entities, in source file clk_3rdhz.v
+    Info (12023): Found entity 1: thirdHertz
+Info (12021): Found 2 design units, including 1 entities, in source file rand_4_2.vhd
+    Info (12022): Found design unit 1: lfsr_bit_4_2-rtl
+    Info (12023): Found entity 1: lfsr_bit_4_2
+Info (12021): Found 2 design units, including 1 entities, in source file rand_20_6.vhd
+    Info (12022): Found design unit 1: lfsr_bit_20_6-rtl
+    Info (12023): Found entity 1: lfsr_bit_20_6
+Info (12021): Found 2 design units, including 1 entities, in source file rand_15_32.vhd
+    Info (12022): Found design unit 1: lfsr_bit_15_32-rtl
+    Info (12023): Found entity 1: lfsr_bit_15_32
+Info (12021): Found 2 design units, including 1 entities, in source file rand_55_14.vhd
+    Info (12022): Found design unit 1: lfsr_bit_55_14-rtl
+    Info (12023): Found entity 1: lfsr_bit_55_14
+Info (12021): Found 1 design units, including 1 entities, in source file rand_4bit_works.bdf
+    Info (12023): Found entity 1: rand_4bit_works
+Info (12021): Found 2 design units, including 1 entities, in source file game.vhd
+    Info (12022): Found design unit 1: game-rtl
+    Info (12023): Found entity 1: game
+Info (12127): Elaborating entity "Super_Slug_A_Bug" for the top level hierarchy
+Info (12128): Elaborating entity "game" for hierarchy "game:inst2"
+Info (12128): Elaborating entity "rand_4bit_works" for hierarchy "rand_4bit_works:inst"
+Info (12128): Elaborating entity "lfsr_bit_15_32" for hierarchy "rand_4bit_works:inst|lfsr_bit_15_32:inst"
+Info (12128): Elaborating entity "onehertz" for hierarchy "rand_4bit_works:inst|onehertz:inst11"
+Warning (10175): Verilog HDL warning at clk_1hz.v(9): ignoring unsupported system task
+Warning (10230): Verilog HDL assignment warning at clk_1hz.v(13): truncated value with size 32 to match size of target (25)
+Info (12128): Elaborating entity "lfsr_bit_20_6" for hierarchy "rand_4bit_works:inst|lfsr_bit_20_6:inst3"
+Info (12128): Elaborating entity "lfsr_bit_4_2" for hierarchy "rand_4bit_works:inst|lfsr_bit_4_2:inst4"
+Info (12128): Elaborating entity "lfsr_bit_55_14" for hierarchy "rand_4bit_works:inst|lfsr_bit_55_14:inst5"
+Info (12128): Elaborating entity "twentyHertz" for hierarchy "twentyHertz:inst3"
+Warning (10175): Verilog HDL warning at clk_20hz.v(9): ignoring unsupported system task
+Warning (10230): Verilog HDL assignment warning at clk_20hz.v(13): truncated value with size 32 to match size of target (25)
+Info (12128): Elaborating entity "hammer" for hierarchy "hammer:inst1"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2259 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 2201 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 599 megabytes
+    Info: Processing ended: Mon Apr 23 18:54:43 2018
+    Info: Elapsed time: 00:00:40
+    Info: Total CPU time (on all processors): 00:00:36
+
+
